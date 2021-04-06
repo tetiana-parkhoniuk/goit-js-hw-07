@@ -7,30 +7,63 @@ const ingredients = [
   'Приправи',
 ];
 
+
 const ingredientsList = document.querySelector('#ingredients');
 
-const firstIngredientEl = document.createElement('li');
-firstIngredientEl.textContent = ingredients[0];
+// == Third Variant == //
 
-const secondIngredientEl = document.createElement('li');
-secondIngredientEl.textContent = ingredients[1];
+const makeIngredientElements = (elements) => {
+    return elements.map(element => {
+        const ingredientEl = document.createElement('li');
+        ingredientEl.textContent = element;
+        return ingredientEl;
+    });
+};
 
-const thirdIngredientEl = document.createElement('li');
-thirdIngredientEl.textContent = ingredients[2];
+const ingredientElements = makeIngredientElements(ingredients);
 
-const fourthIngredientEl = document.createElement('li');
-fourthIngredientEl.textContent = ingredients[3];
+ingredientsList.append(...ingredientElements);
 
-const fifthIngredientEl = document.createElement('li');
-fifthIngredientEl.textContent = ingredients[4];
+// == Second Variant == //
 
-const sixthIngredientEl = document.createElement('li');
-sixthIngredientEl.textContent = ingredients[5];
+// const elements = ingredients.map(element => {
+//     const ingredientEl = document.createElement('li');
+//     ingredientEl.textContent = element;
+//     return ingredientEl;
+// });
 
-ingredientsList.append(firstIngredientEl,
-    secondIngredientEl,
-    thirdIngredientEl,
-    fourthIngredientEl,
-    fifthIngredientEl,
-    sixthIngredientEl
-);
+// console.log(elements);
+
+// ingredientsList.append(...elements);
+
+
+// == First Variant == //
+// const firstIngredientEl = document.createElement('li');
+// firstIngredientEl.textContent = ingredients[0];
+
+// const secondIngredientEl = document.createElement('li');
+// secondIngredientEl.textContent = ingredients[1];
+
+// const thirdIngredientEl = document.createElement('li');
+// thirdIngredientEl.textContent = ingredients[2];
+
+// const fourthIngredientEl = document.createElement('li');
+// fourthIngredientEl.textContent = ingredients[3];
+
+// const fifthIngredientEl = document.createElement('li');
+// fifthIngredientEl.textContent = ingredients[4];
+
+// const sixthIngredientEl = document.createElement('li');
+// sixthIngredientEl.textContent = ingredients[5];
+
+// ingredientsList.append(firstIngredientEl,
+//     secondIngredientEl,
+//     thirdIngredientEl,
+//     fourthIngredientEl,
+//     fifthIngredientEl,
+//     sixthIngredientEl
+// );
+
+
+
+
