@@ -1,3 +1,10 @@
+//Напиши скрипт для створення галереї зображень по масиву даних.
+//Використовуй масив об'єктів images для створення тегів img вкладених в li. 
+//Для створення розмітки використовуй шаблонні рядки і insertAdjacentHTML().
+
+//Всі елементи галереї повинні додаватися в DOM за одну операцію вставки.
+//Додай мінімальне оформлення галереї флексбоксами або грід через   css-класи.
+
 const images = [
   {
     url:
@@ -32,8 +39,6 @@ const makeImageCardMarkup = (image) => {
 const makeImageCardsMarkup = images
     .map(makeImageCardMarkup)
     .join('');
-
-console.log(makeImageCardsMarkup);
 
 galleryListEl.insertAdjacentHTML('beforeend', makeImageCardsMarkup);
 

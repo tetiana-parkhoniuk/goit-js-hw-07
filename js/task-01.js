@@ -13,35 +13,44 @@ console.log(message);
 //Категорія: Тварини
 //Кількість елементів: 4
 
-const categoriesList = document.querySelector('#categories');
-const allNames = categoriesList.querySelectorAll('h2');
+// == Second Variant ==//
 
-const firstCategoryTitle = `Категорія: ${allNames[0].textContent}`;
-console.log(firstCategoryTitle);
+const categoriesList = [...allCategories].map(category =>
+    `Категорія: ${category.children[0].textContent}\nКількість елементів: ${category.children[1].children.length}`)
+    .join('\n');
+console.log(categoriesList);
 
-const firstCategoryEl = categoriesList.firstElementChild;
-const firstUlEl = firstCategoryEl.querySelector('ul');
-const firstAllElements = firstUlEl.children;
-const firstAllElementsMessage = `Кількість елементів: ${firstAllElements.length}`;
-console.log(firstAllElementsMessage);
+// == First Variant ==//
+// const categoriesList = document.querySelector('#categories');
+// const allNames = categoriesList.querySelectorAll('h2');
 
-const secondCategoryTitle = `Категорія: ${allNames[1].textContent}`;
-console.log(secondCategoryTitle);
+// const firstCategoryTitle = `Категорія: ${allNames[0].textContent}`;
+// console.log(firstCategoryTitle);
 
-const secondCategoryEl = firstCategoryEl.nextElementSibling;
-const secondUlEl = secondCategoryEl.querySelector('ul');
-const secondAllElements = secondUlEl.children;
-const secondAllElementsMessage = `Кількість елементів: ${secondAllElements.length}`;
-console.log(secondAllElementsMessage);
+// const firstCategoryEl = categoriesList.firstElementChild;
+// const firstUlEl = firstCategoryEl.querySelector('ul');
+// const firstAllElements = firstUlEl.children;
+// const firstAllElementsMessage = `Кількість елементів: ${firstAllElements.length}`;
+// console.log(firstAllElementsMessage);
 
-const thirdCategoryTitle = `Категорія: ${allNames[2].textContent}`;
-console.log(thirdCategoryTitle);
+// const secondCategoryTitle = `Категорія: ${allNames[1].textContent}`;
+// console.log(secondCategoryTitle);
 
-const thirdCategoryEl = secondCategoryEl.nextElementSibling;
-const thirdUlEl = thirdCategoryEl.querySelector('ul');
-const thirdAllElements = thirdUlEl.children;
-const thirdAllElementsMessage = `Кількість елементів: ${thirdAllElements.length}`;
-console.log(thirdAllElementsMessage);
+// const secondCategoryEl = firstCategoryEl.nextElementSibling;
+// const secondUlEl = secondCategoryEl.querySelector('ul');
+// const secondAllElements = secondUlEl.children;
+// const secondAllElementsMessage = `Кількість елементів: ${secondAllElements.length}`;
+// console.log(secondAllElementsMessage);
+
+// const thirdCategoryTitle = `Категорія: ${allNames[2].textContent}`;
+// console.log(thirdCategoryTitle);
+
+// const thirdCategoryEl = secondCategoryEl.nextElementSibling;
+// const thirdUlEl = thirdCategoryEl.querySelector('ul');
+// const thirdAllElements = thirdUlEl.children;
+// const thirdAllElementsMessage = `Кількість елементів: ${thirdAllElements.length}`;
+// console.log(thirdAllElementsMessage);
+
 
 
 
