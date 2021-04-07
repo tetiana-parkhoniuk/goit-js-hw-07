@@ -12,25 +12,18 @@
 const decrementBtn = document.querySelector('button[data-action=decrement]');
 const valueEl = document.querySelector('#value');
 const incrementBtn = document.querySelector('button[data-action=increment]');
+let number = parseInt(valueEl.textContent);
 
 decrementBtn.addEventListener('click', onDecrementBtnClick);
 incrementBtn.addEventListener('click', onIncrementBtnClick);
 
-// function decrementValue() {
-//     return counterValue - 1;
-// };
-
-// function incrementtValue() {
-//     return counterValue + 1;
-// };
-
 function onDecrementBtnClick(event) {
-    valueEl.value - 1;
-    console.log(valueEl.textContent =- 1);
+    number--;
+    valueEl.innerText = number;
 };
 
 function onIncrementBtnClick(event) {
-     valueEl.textContent =+ 1;
+    number++;
+    valueEl.innerText = number;
 };
-
 
