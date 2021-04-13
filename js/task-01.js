@@ -13,12 +13,20 @@ console.log(message);
 //Категорія: Тварини
 //Кількість елементів: 4
 
+// == Third Variant ==//
+
+const categoriesList = allCategories.forEach((category) => {
+    console.log(`Категорія: ${category.children[0].textContent}`);
+    console.log(`Кількість елементів: ${category.children[1].children.length}`);
+});
+
+
 // == Second Variant ==//
 
-const categoriesList = [...allCategories].map(category =>
-    `Категорія: ${category.children[0].textContent}\nКількість елементів: ${category.children[1].children.length}`)
-    .join('\n');
-console.log(categoriesList);
+// const categoriesList = [...allCategories].map(category =>
+//     `Категорія: ${category.children[0].textContent}\nКількість елементів: ${category.children[1].children.length}`)
+//     .join('\n');
+// console.log(categoriesList);
 
 // == First Variant ==//
 // const categoriesList = document.querySelector('#categories');
