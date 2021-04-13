@@ -15,5 +15,41 @@
 //Створи функцію destroyBoxes(), яка очищає div#boxes.
 
 const refs = {
+    number: document.querySelector('input'),
+    renderBtn: document.querySelector('button[data-action=render]'),
+    destroyBtn: document.querySelector('button[data-action=destroy]'),
+    boxesList: document.querySelector('#boxes'),
+};
+
+refs.renderBtn.addEventListener('click', onRenderBtnClick);
+refs.destroyBtn.addEventListener('click', onDestroyBtnClick);
+
+function onRenderBtnClick(event) {
+    console.log(refs.number.value);
+};
+
+function onDestroyBtnClick(event) {
+    console.log(refs.number.value);
+};
+
+function createBoxes(amount) {
+    const boxTemplate = `
+    <div class="box__item"></div>
+`;
+    return 
+
     
-}
+    refs.boxesList.insertAdjacentHTML('beforeend', boxTemplate); 
+};
+
+function createBoxesArray(...boxes) {
+        return boxTemplate;
+    }
+
+
+console.log(createBoxes(4))
+
+
+// console.log(boxTemplate)
+
+
